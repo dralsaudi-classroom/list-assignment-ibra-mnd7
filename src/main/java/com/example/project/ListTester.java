@@ -4,7 +4,7 @@ public class ListTester<T> {
     public static <T> void circularLeftShift(List <T> list, int n)
     {    
     	
-    	if(list.empty()) {
+    	if(list.empty()||n<=0) {
     		return;
     	}
     	
