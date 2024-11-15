@@ -8,9 +8,9 @@ public class ListTester<T> {
 
 	list.findFirst();
 	for(int i=0; i<n;i++) {
-		if(!list.full()) {
+		
 	temp[tempcount++]=list.retrieve();
-	list.findNext();}}
+	list.remove();}
 	
 	while(!list.last()) {
 		list.findNext();
@@ -21,38 +21,27 @@ public class ListTester<T> {
 		
 	}
     }
-    public static <T> void reverseCopy(DLL<T> l1, DLL<T> l2)
-    {
-    	l1.findFirst();
-    	int count=0;
+    public static <T> void reverseCopy(DLL<T> l1, DLL<T> l2) {
+
     	while(!l1.last()) {
     		l1.findNext();
-    		count++;
+    	
     	}
-    	count++;
-    	while(count>0) {
+    
+    	
+    	
+    	
+    	while(!l1.first()) {
+    		
     		l2.insert(l1.retrieve());
     		l1.findPrevious();
-    		count--;
+    		
     	}
+    	l2.insert(l1.retrieve());
 
     }
     
     
     
-    public void remove(List <T> list, T e){
-    	while(!list.last()) {
-    		if(list.retrieve().equals(e)) {
-    			list.remove();
-    			
-    		}
-    		list.findNext();
-    		
-    	}
-    	
-    	if(list.retrieve().equals(e))
-    	list.remove();
-    	
-    	
-    }
+
 }
