@@ -90,19 +90,22 @@ public class LinkedList<T> implements List<T>{
         l2.current=l2.head;
         current=head;
         LinkedList <T>temp =new <T>LinkedList();
-        
-       while(!l2.last()||current.next!=null) {
+        while(current!=null) {
+        	
+         	   temp.insert(current.data);
+         	   current =current.next;
+        }
+        	
+       while(!l2.last()) {
     	   
-    	   if(current!=null) {
-    	   temp.insert(current.data);
-    	   current =current.next;}
     	   
-    	   if(!l2.last()) {
+    	   
+    	  
     	   temp.insert(l2.current.data);
-    	   l2.current= l2.current.next;}
+    	   l2.current= l2.current.next;
     	   
        }
-
+       temp.insert(l2.current.data);
         return temp;
         
     }}
