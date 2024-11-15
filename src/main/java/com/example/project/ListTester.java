@@ -10,12 +10,17 @@ public class ListTester<T> {
 	for(int i=0; i<n;i++) {
 		
 	temp[tempcount++]=list.retrieve();
-	list.remove();}
+	list.remove();
 	
+	if(list.empty())
+		break;
+	
+	}
+	if(!list.empty())
 	while(!list.last()) {
 		list.findNext();
 	}
-	
+
 	for(int i=0; i<tempcount;i++) {
 		list.insert(temp[i]);
 		
@@ -27,10 +32,7 @@ public class ListTester<T> {
     		l1.findNext();
     	
     	}
-    
-    	
-    	
-    	
+
     	while(!l1.first()) {
     		
     		l2.insert(l1.retrieve());
