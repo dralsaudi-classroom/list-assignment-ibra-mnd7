@@ -6,12 +6,12 @@ public class ListTester<T> {
     	
     	int counter=0;
     	list.findFirst();
-    	while(list.last()) {
+    	while(!list.last()) {
     		list.findNext();
     		counter++;
     	}
     	counter++;
-    	
+    	list.findFirst();
     	if(list.empty()||n<=0) {
     		return;
     	}
