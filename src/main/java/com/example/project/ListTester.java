@@ -4,8 +4,20 @@ public class ListTester<T> {
     public static <T> void circularLeftShift(List <T> list, int n)
     {    
     	
+    	int counter=0;
+    	list.findFirst();
+    	while(list.last()) {
+    		list.findNext();
+    		counter++;
+    	}
+    	counter++;
+    	
     	if(list.empty()||n<=0) {
     		return;
+    	}
+    	
+    	if(n>counter) {
+    		n=n%counter;
     	}
     	
     	for( int i = 0; i < n ; i ++) {
